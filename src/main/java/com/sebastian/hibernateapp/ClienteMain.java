@@ -43,7 +43,7 @@ public class ClienteMain {
                     cliente.setNombre(nombre);
                     cliente.setApellido(apellido);
                     cliente.setFormaPago(formaPago);
-                    repository.create(cliente);
+                    repository.update(id, nombre, apellido, formaPago);
                     em.close();
                     break;
 
