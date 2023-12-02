@@ -7,6 +7,12 @@ public class ClienteDto {
     public ClienteDto() {
     }
 
+    
+    public ClienteDto(String nombre) {
+        this.nombre = nombre;
+    }
+
+
     public ClienteDto(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;

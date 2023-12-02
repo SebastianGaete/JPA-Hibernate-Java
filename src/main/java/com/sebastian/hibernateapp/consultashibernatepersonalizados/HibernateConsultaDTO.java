@@ -24,12 +24,21 @@ public class HibernateConsultaDTO {
           * en donde está ubicado nuestra clase DTO y pasando por constructor los atributos que queremos poblar, y al finalizar indicamos
           * que los datos vendrán desde la clase Cliente con el alias c.
           */
+        System.out.println(" ----------------- Poblar ClienteDto con los datos de la clase Cliente ----------------- ");
         List<ClienteDto> listaClientes = em.createQuery(
             "select new com.sebastian.hibernateapp.models.ClienteDto(c.nombre, c.apellido) from Cliente c", ClienteDto.class)
         .getResultList();
         listaClientes.forEach(System.out::println);
 
+
+        System.out.println(" ------- Poblar solo atributo nombre de ClienteDto con los datos de la clase Cliente ------------ ");
+        List<ClienteDto> soloNombres = em.createQuery(
+            "select new com.sebastian.hibernateapp.models.ClienteDto(c.nombre) from Cliente c", ClienteDto.class)
+            .getResultList();
+        soloNombres.forEach(c -> System.out.println("Nombre: " + c.getNombre()));
+
         
+
         em.close();
     }
 }
