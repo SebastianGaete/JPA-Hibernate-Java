@@ -1,0 +1,3 @@
+com\sebastian\hibernateapp\entity\Cliente.class
+com\sebastian\hibernateapp\HibernateListar.class
+com\sebastian\hibernateapp\utility\JpaUtil.class
