@@ -25,5 +25,7 @@ public class HibernateSubquery {
         .setMaxResults(1).getSingleResult();
         System.out.println("Apellido más corto: " + apellidoMasCorto);
 
+
+        
     }
 }
